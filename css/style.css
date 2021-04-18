@@ -161,56 +161,12 @@ ul {
     display: flex;
     width: 1290px;
 }
-@keyframes selected {
-    from {
-        max-width: 0;
-    }
-    to {
-        max-width: 100%;
-    }
-}
-@keyframes piscar {
-    0%, 100%{
-        opacity: 1;
-    }
-    50% {
-        opacity: 0;
-    }
-}
-@keyframes descOpacity {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-@keyframes navFixed {
-    from {
-        opacity: 0;
-        transform: translate3d(0px ,-30px, 0px);
-    }
-    to {
-        opacity: 1;
-        transform: translate3d(0px ,0px, 0px);
-    }
-}
-@keyframes navFixed2 {
-    
-    from {
-        opacity: 0;
-        transform: translate3d(0px ,30px, 0px);
-    }
-    to {
-        opacity: 1;
-        transform: translate3d(0px ,0px, 0px);
-    }
-}
+
 /* About */
 .about {
     width: 100%;
     height: auto;
-    display: flex;
+    display: none;
     position: relative;
     justify-content: center;
     background-image: url('../images/Texture.png');
@@ -278,6 +234,7 @@ ul {
 .techs li svg {
     margin-right: 15px;
 }
+
 /* Btn */
 .btn{
     font-family: "Antonio",sans-serif;
@@ -292,12 +249,12 @@ ul {
     background-color: rgba(35,6,64,0.9);
     box-shadow: -2px 2px 0px 1px rgba(253, 173, 192, 90%);
 }
-/* Contact */
 
+/* Contact */
 .contact {
     width: 100%;
     height: 500px;
-    display: flex;
+    display: none;
     justify-content: center;
 }
 .contact-container{
@@ -376,14 +333,7 @@ ul {
     margin-right: 20px;
     margin-top: 10px;
 }
-@keyframes box{
-    from {
-        box-shadow:-0px 0px 0px 0px #543D6B, -0px 0px 0px 0px #543D6B;
-    }
-    to {
-        box-shadow:-8px 8px 0px 0px #543D6B, -0px 0px 0px 1px #543D6B;
-    }
-}
+/* Medias */
 @media only screen and (max-width: 660px){
     .contact-painel {
         max-width: 400px;
@@ -425,8 +375,8 @@ ul {
     .contact-painel {
         max-width: 330px;
         /* box-shadow: 0px 0px 0px 0px #543D6B !important;
-        margin-left: 40px;
-        padding:none; */
+        /* margin-left: 30px; */
+        /* padding:none; */
         /* border: 1px solid black; */
     }
     .about .desc{
@@ -474,5 +424,74 @@ ul {
     }
     .nav ul li a.active {
         color: #FF809D;
+    }
+}
+/* js */
+.about.active , .contact.active{
+    display: flex !important;
+    animation: animationSections 2s forwards;
+}
+/* Animations */
+@keyframes animationSections {
+    from {
+        opacity: 0;
+        transform: translate3d(-30px, 0px ,0px);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0px, 0px ,0px);
+    }
+}
+@keyframes selected {
+    from {
+        max-width: 0;
+    }
+    to {
+        max-width: 100%;
+    }
+}
+@keyframes piscar {
+    0%, 100%{
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+@keyframes descOpacity {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes navFixed {
+    from {
+        opacity: 0;
+        transform: translate3d(0px ,-30px, 0px);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0px ,0px, 0px);
+    }
+}
+@keyframes navFixed2 {
+    
+    from {
+        opacity: 0;
+        transform: translate3d(0px ,30px, 0px);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0px ,0px, 0px);
+    }
+}
+@keyframes box{
+    from {
+        box-shadow:-0px 0px 0px 0px #543D6B, -0px 0px 0px 0px #543D6B;
+    }
+    to {
+        box-shadow:-8px 8px 0px 0px #543D6B, -0px 0px 0px 1px #543D6B;
     }
 }

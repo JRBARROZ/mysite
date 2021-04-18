@@ -1,4 +1,5 @@
 const text = document.querySelector('.menu-apresentation .title p')
+const sections = document.querySelectorAll('.js-scroll');
 function addActiveInternLinks(){
     const li = document.querySelectorAll('.nav-intern-links li a');
     li[0].classList.add('active');
@@ -45,10 +46,26 @@ function smoothScroll(){
         item.addEventListener('click', smooth);
     })
 }
+function scrollSections (){
+    sections[0].classList.add('active');
+    window.addEventListener('scroll', () => {
+        const height = window.innerHeight * 0.1;
+        sections.forEach((item) => {
+            const distance = item.getBoundingClientRect().top - height;
+            if(distance <= 0){
+                item.classList.add('active');
+            }
+        });
+    });
+}
 window.addEventListener('scroll', () =>{
     const nav = document.querySelector('.nav-fixed');
     nav.classList.toggle('active', window.scrollY > 63);
 });
+
+
+
+scrollSections();
 smoothScroll();
 descEffect();
 writeEffect(text);
