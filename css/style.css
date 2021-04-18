@@ -424,9 +424,9 @@ ul {
 @media only screen and (max-width: 480px){
     .contact-painel {
         max-width: 350px;
-        box-shadow: 0px 0px 0px 0px #543D6B !important;
+        /* box-shadow: 0px 0px 0px 0px #543D6B !important;
         margin-left: 40px;
-        padding:none;
+        padding:none; */
         /* border: 1px solid black; */
     }
     .about .desc{
@@ -448,7 +448,8 @@ ul {
         font-size: .9em;
     }
     .menu-apresentation{
-        width: 350px;
+        margin-top: 30px;
+        width: 320px;
     }
     .menu-apresentation .sub-title {
         font-size: 1em;
@@ -457,6 +458,9 @@ ul {
     .menu-apresentation .title {
         font-size: 2em;
         
+    }
+    .menu-apresentation ul li {
+        font-size: 0.8em;
     }
     .nav ul li a.active::before{
         content: '';
