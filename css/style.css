@@ -423,7 +423,7 @@ ul {
 }
 @media only screen and (max-width: 480px){
     .contact-painel {
-        max-width: 350px;
+        max-width: 330px;
         /* box-shadow: 0px 0px 0px 0px #543D6B !important;
         margin-left: 40px;
         padding:none; */
@@ -445,7 +445,7 @@ ul {
     }
     .contact-painel ul li{
         flex-direction: column;
-        font-size: .9em;
+        font-size: .8em;
     }
     .menu-apresentation{
         margin-top: 30px;
