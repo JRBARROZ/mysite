@@ -33,13 +33,13 @@ function descEffect(){
     }, 4400);
 }
 function smoothScroll(){
-    const links = document.querySelectorAll('.nav-intern-links a');
+    const links = document.querySelectorAll('.nav-intern-links a[href^="#"]');
     function smooth(event){
         event.preventDefault();
-        const link = document.querySelector(event.currentTarget.getAttribute('href'))
+        const link = document.querySelector(event.currentTarget.getAttribute('href'));
+        const distanceToGo = link.getBoundingClientRect().top - 30;
         window.scrollTo({
-            top: link.getBoundingClientRect().top - 30,
-            left:0,
+            top: distanceToGo,
         });
     }
     links.forEach((item) => {
@@ -47,9 +47,11 @@ function smoothScroll(){
     })
 }
 function scrollSections (){
-    sections[0].classList.add('active');
+    setTimeout(() =>{
+        sections[0].classList.add('active');
+    }, 5000);
     window.addEventListener('scroll', () => {
-        const height = window.innerHeight * 0.1;
+        const height = window.innerHeight * 0.8;
         sections.forEach((item) => {
             const distance = item.getBoundingClientRect().top - height;
             if(distance <= 0){
