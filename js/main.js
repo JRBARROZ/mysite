@@ -47,9 +47,6 @@ function smoothScroll(){
     })
 }
 function scrollSections (){
-    setTimeout(() =>{
-        sections[0].classList.add('active');
-    }, 5000);
     window.addEventListener('scroll', () => {
         const height = window.innerHeight * 0.8;
         sections.forEach((item) => {
